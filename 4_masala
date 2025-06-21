@@ -1,0 +1,64 @@
+# 4.10 ta random son chiqaruvchi threadlar
+# Har bir thread bitta random son chiqarsin. 
+# Ular tartibsiz chiqishi kerak.
+import threading
+from time import sleep 
+import random
+
+def print_1():
+    sleep(random.randint(0, 7))
+    print('print_1 ishladi ')
+    print(f"{random.randint(1,100)}")
+def print_2():
+    sleep(random.randint(0, 7))
+    print('print_2 ishladi',)
+    print(f"{random.randint(1,100)}")
+def print_3():
+    sleep(random.randint(0, 7))
+    print('print_3 ishladi',)
+    print(f"{random.randint(1,100)}")
+def print_4():
+    sleep(random.randint(0, 7))
+    print('print_4 ishladi',)
+    print(f"{random.randint(1,100)}")
+def print_5():
+    sleep(random.randint(0, 7))
+    print('print_5 ishladi',)
+    print(f"{random.randint(1,100)}")
+def print_6():
+    sleep(random.randint(0, 7))
+    print('print_6 ishladi',)
+    print(f"{random.randint(1,100)}")
+def print_7():
+    sleep(random.randint(0, 7))
+    print('print_7 ishladi',)
+    print(f"{random.randint(1,100)}")
+def print_8():
+    sleep(random.randint(0, 7))
+    print('print_8 ishladi',)
+    print(f"{random.randint(1,100)}")
+def print_9():
+    sleep(random.randint(0, 7))
+    print('print_9 ishladi',)
+    print(f"{random.randint(1,100)}")
+def print_10():
+    sleep(random.randint(0, 7))
+    print('print_10 ishladi',)
+    print(f"{random.randint(1,100)}")
+
+t1 = threading.Thread(target=print_1)
+t2 = threading.Thread(target=print_2)
+t3 = threading.Thread(target=print_3)
+t4 = threading.Thread(target=print_4)
+t5 = threading.Thread(target=print_5)
+t6 = threading.Thread(target=print_6)
+t7 = threading.Thread(target=print_7)
+t8 = threading.Thread(target=print_8)
+t9 = threading.Thread(target=print_9)
+t10 = threading.Thread(target=print_10)
+
+threads = [t1,t2,t3,t4,t5,t6,t7,t8,t9,t10]
+for i in threads:
+    i.start()
+for i in threads:
+    i.join()
