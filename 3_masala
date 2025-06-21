@@ -1,0 +1,21 @@
+# 3.Mashina royxati
+# Car(brand, model, year, mileage) nomli namedtuple.
+# Foydalanuvchi 5 ta mashina kiritadi. Eng 
+# kam yurgan mashinani toping.
+from collections import namedtuple
+
+Car = namedtuple('Car', ['brand', 'model', 'year', 'mileage'])
+car1 = Car('Chevrolet', 'Cobalt', 2022, 15000)
+car2 = Car('Kia', 'K5', 2021, 22000)
+car3 = Car('Hyundai', 'Elantra', 2020, 18000)
+car4 = Car('Toyota', 'Camry', 2019, 12000)
+car5 = Car('Lada', 'Vesta', 2023, 9000)
+
+cars = [car1,car2,car3,car4,car5]
+kam_yurgan = cars[0]
+for i in cars:
+    if i.mileage < kam_yurgan.mileage:
+        kam_yurgan = i
+
+print("Kam yurgan mashina:")
+print(f"{kam_yurgan.brand} {kam_yurgan.model}, {kam_yurgan.year}-yil, {kam_yurgan.mileage} km")
